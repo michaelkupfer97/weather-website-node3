@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-
-<HTML>  
+<html>
     <head>
         <title>Help</title>
         <link rel="icon" href="/img/logo.jpg">
         <link rel="stylesheet" href="/css/styles.css">  
-
     </head>
 
     <body>
         <div class="main-content">
-        {{> header}}
-        
-        <p>This is some helpful text from {{name}}.</p>
+            {{> header}}
+
+            
+
+            <p>This website allows you to get real-time weather information for any location.</p>
+
+            <ul>
+                <li>Go to the main page.</li>
+                <li>Enter the name of a city or place in the search box.</li>
+                <li>Click the "Search" button.</li>
+                <li>The weather data will appear below, including temperature and description.</li>
+            </ul>
+
+            <p>
+                The website uses two external APIs:
+            </p>
+
+            <ul>
+                <li>TomTom API to convert your location input to coordinates.</li>
+                <li>WeatherStack API to fetch current weather details.</li>
+            </ul>
+
+            <p>
+                If you encounter any issues or the location is not found, try searching a different city name.
+            </p>
+
         </div>
-        
+
         {{> footer}}
     </body>
-    
-
-
-</HTML>
+</html>

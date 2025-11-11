@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-<HTML>  
+<html>
     <head>
         <title>About</title>
         <link rel="icon" href="/img/logo.jpg">
@@ -9,14 +8,42 @@
 
     <body>
         <div class="main-content">
-        {{> header}}
+            {{> header}}
 
-        <img class="portrait" src="img/robot.jpg">
+            <p>
+                Hi, I'm Michael 👋<br>
+                I'm a software developer who enjoys building web applications and learning how systems work behind the scenes.
+                I like exploring new technologies and improving my skills by creating real, functional projects.
+            </p>
+
+            <p>
+                This project was created while learning Node.js, Express, and Handlebars.
+                It takes a location input, fetches coordinates using the TomTom API, and then retrieves live weather data from WeatherStack.
+                The goal of this app is to practice working with APIs, server-side rendering, and dynamic client interactions.
+            </p>
+
+            <p>
+    Contact me:<br>
+    <a href="mailto:Michaelkulhs@gmail.com">Michaelkulhs@gmail.com</a><br><br>
+
+    LinkedIn:<br>
+    <a href="https://www.linkedin.com/in/michael-kupfer/" target="_blank">
+        www.linkedin.com/in/michael-kupfer
+    </a><br><br>
+
+    Source code:<br>
+    <a href="https://github.com/michaelkupfer97/weather-website-node3" target="_blank">
+        GitHub Repository
+    </a><br><br>
+
+    Feel free to reach out if you have any questions or suggestions!
+</p>
+
+
+            <img class="portrait" src="/img/robot.jpg" alt="robot portrait">
 
         </div>
+
         {{> footer}}
     </body>
-
-
-
-</HTML>
+</html>
