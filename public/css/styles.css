@@ -57,3 +57,60 @@ button{
     font-size: 16px;
     cursor: pointer;
 }
+
+
+/* === Animated sky background === */
+html, body { min-height: 100%; }
+body { position: relative; overflow-x: hidden; }
+
+/* שכבת רקע קבועה מאחורי כל התוכן */
+#sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(#87ceeb 0%, #b7e3ff 55%, #eaf7ff 100%);
+}
+
+/* השמש */
+#sun {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff8c6 0%, #ffe26e 55%, #ffc83d 75%);
+  box-shadow: 0 0 80px 20px rgba(255, 220, 90, 0.6);
+}
+
+/* עננים */
+.cloud {
+  position: absolute;
+  left: -30vw;          /* מתחיל מחוץ למסך משמאל */
+  width: 220px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50px;
+  filter: drop-shadow(0 8px 10px rgba(0,0,0,.06));
+  animation: drift 60s linear infinite;
+  opacity: 0.92;
+}
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+}
+.cloud::before { width: 120px; height: 120px; left: 18px; top: -48px; }
+.cloud::after  { width: 140px; height: 90px;  left: 90px; top: -28px; }
+
+/* וריאציות לגובה/מהירות */
+.cloud.c2 { top: 35vh; width: 280px; height: 85px; animation-duration: 90s; opacity: .88; }
+.cloud.c3 { top: 55vh; width: 180px; height: 60px; animation-duration: 75s; opacity: .9; }
+.cloud.c4 { top: 25vh; width: 260px; height: 80px; animation-duration: 105s; opacity: .86; }
+
+@keyframes drift {
+  from { left: -30vw; }
+  to   { left: 110vw; } /* חולף את המסך לצד ימין */
+}
